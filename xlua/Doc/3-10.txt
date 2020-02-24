@@ -3,6 +3,8 @@
 1）映射到delegate（推荐），要生成代码
 2）映射到LuaFunction
 
+
+------
 1.1）含有out与ref的delegate需要增加标签[CSharpCallLua]并生成bridge代码
 1.2）委托引用后退出luaenv前，需要释放委托引用，否则会报错
 1.3）对于unity与c#中复杂类型的api，必须加入xlua的配置文件，经过生成代码后才能
@@ -10,5 +12,11 @@
 1.4）ExampleGenConfig.cs配置文件
 1.5）xlua下的doc和Example可删除，需要先把1.4）文件拷贝出来
 
+------
+2.1）使用方便，不需要打标记生成代码直接使用，但不推荐
 
-2.1）
+
+------
+建议：
+1）初始化的时把调用lua function获取一次，映射到delegate；后续直接使用delegate，table也是
+2）delegate和interface使用可以完全和xlua解耦，由专门的中间模块来设置映射
