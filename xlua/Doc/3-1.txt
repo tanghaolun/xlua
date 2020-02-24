@@ -1,0 +1,6 @@
+
+ 1 c#调用lua的table
+ 1）映射到普通的class或struct（值拷贝，修改class字段不会同步到table）
+ 2）映射到一个interface（推荐)(添加[CSharpCallLua]，xlua-Generate Code生成Gen文件的)
+ 3）by value（dictionary和对于简单的表可用）
+ 4）映射到luatable（不推荐）（功能强大，使用方便；效率低，表特别复杂可以使用）

@@ -3,7 +3,64 @@
 
 str = "全局变量"
 number = 10
-local num = 20 -- 测试是否可以调用local的局部变量
-
+local num = 20 -- 测试是否可以调用local的局部变量(不行)
 floNumber = 88.333
 IsFirstTime = true
+
+-- 定义最简单的表（简单表，只有键值对）
+gameSimple = {"1989","29898",}
+
+-- 定义简单的表（简单表，只有键值对）
+gameLanguage = {str1 = "1",str2= "2",}
+
+-- 定义一个综合表（lua中的OOP）（复杂表，除了键值还有其他）
+gameUser = {
+   name = "name",
+   age = 111,
+   ID = "222",
+
+   Speak = function()
+   print("function speak")
+   end,
+   
+   Caculation= function(this,a,b)
+   return this.age+a+b
+   end,
+}
+
+--------------------------------------------------
+--函数
+
+function ProcMyFunc1()
+   print("func ProcMyFunc1")
+end
+
+function ProcMyFunc2(num1,num2)
+   print("func ProcMyFunc2:" ..num1 .. "-" .. num2)
+end
+
+function ProcMyFunc3(num1,num2)
+   print("func ProcMyFunc3:" .. (num1+num2))
+end
+
+function ProcMyFunc4(num1,num2)
+   print("func ProcMyFunc4:" ..(num1+num2))
+end
+
+--多个返回数值的函数
+function ProcMyFunc5(num1,num2)
+   local rel = num1 +num2 
+   return num1,num2,rel
+end
+
+
+
+
+
+
+
+
+
+
+
+
