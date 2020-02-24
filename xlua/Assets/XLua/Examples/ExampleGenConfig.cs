@@ -59,7 +59,11 @@ public static class ExampleGenConfig
                 typeof(Action<string>),
                 typeof(Action<double>),
                 typeof(UnityEngine.Events.UnityAction),
-                typeof(System.Collections.IEnumerator)
+                typeof(System.Collections.IEnumerator),
+
+        //new add
+                typeof(Action<int,int,int>),
+                typeof(Func<int,int,int>),
             };
 
     //黑名单

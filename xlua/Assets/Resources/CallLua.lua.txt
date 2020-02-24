@@ -41,10 +41,11 @@ end
 
 function ProcMyFunc3(num1,num2)
    print("func ProcMyFunc3:" .. (num1+num2))
+   return num1+num2
 end
 
-function ProcMyFunc4(num1,num2)
-   print("func ProcMyFunc4:" ..(num1+num2))
+function ProcMyFunc4(num1,num2,num3)
+   print("func ProcMyFunc4:" ..(num1+num2+num3))
 end
 
 --多个返回数值的函数
