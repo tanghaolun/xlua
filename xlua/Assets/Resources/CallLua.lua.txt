@@ -1,0 +1,9 @@
+-- 测试C#调用lua
+-- 定义全局变量
+
+str = "全局变量"
+number = 10
+local num = 20 -- 测试是否可以调用local的局部变量
+
+floNumber = 88.333
+IsFirstTime = true
